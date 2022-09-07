@@ -1,0 +1,44 @@
+{
+  "//": {
+    "metadata": {
+      "backend": "local",
+      "stackName": "test",
+      "version": "0.12.2"
+    },
+    "outputs": {
+    }
+  },
+  "provider": {
+    "aws": [
+      {
+        "region": "eu-west-1"
+      }
+    ]
+  },
+  "resource": {
+    "aws_s3_bucket": {
+      "bucket": {
+        "//": {
+          "metadata": {
+            "path": "test/bucket",
+            "uniqueId": "bucket"
+          }
+        },
+        "bucket": "lambda-asset-bucket-test123123asdasd4"
+      }
+    }
+  },
+  "terraform": {
+    "backend": {
+      "local": {
+        "path": "/Users/pedram/repos/github/hashicorp/hashitalks/test/terraform.test.tfstate"
+      }
+    },
+    "required_providers": {
+      "aws": {
+        "source": "aws",
+        "version": "4.29.0"
+      }
+    }
+  }
+}
