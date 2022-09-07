@@ -1,7 +1,7 @@
 {
   "//": {
     "metadata": {
-      "backend": "local",
+      "backend": "cloud",
       "stackName": "test",
       "version": "0.12.2"
     },
@@ -29,9 +29,11 @@
     }
   },
   "terraform": {
-    "backend": {
-      "local": {
-        "path": "/Users/pedram/repos/github/hashicorp/hashitalks/test/terraform.test.tfstate"
+    "cloud": {
+      "hostname": "app.terraform.io",
+      "organization": "pedram-company",
+      "workspaces": {
+        "name": "cdktf-tests3"
       }
     },
     "required_providers": {

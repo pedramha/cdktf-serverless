@@ -1,5 +1,5 @@
 import { Construct } from "constructs";
-import { App, TerraformStack } from "cdktf";
+import { App, CloudBackend, NamedCloudWorkspace, TerraformStack } from "cdktf";
 import { s3, AwsProvider } from "@cdktf/provider-aws";
 
 class MyStack extends TerraformStack {
@@ -16,5 +16,10 @@ class MyStack extends TerraformStack {
 }
 
 const app = new App();
-new MyStack(app, "test");
+const stack = new MyStack(app, "test");
+new CloudBackend(stack, {
+  hostname: "app.terraform.io",
+  organization: "pedram-company",
+  workspaces: new NamedCloudWorkspace("cdktf-tests3")
+});
 app.synth();
