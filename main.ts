@@ -6,10 +6,10 @@ class MyStack extends TerraformStack {
   constructor(scope: Construct, name: string) {
     super(scope, name);
     new AwsProvider(this, "aws", {
-      region: "eu-west-1"
+      region: "eu-central-1"
     });
     new s3.S3Bucket(this, "bucket", {
-      bucket: 'lambda-asset-bucket-test123123asdasd4',
+      bucket: 'aaa-asset-bucket-test123123asdasd4',
     });
 
   }
