@@ -11,7 +11,7 @@
   "provider": {
     "aws": [
       {
-        "region": "eu-west-1"
+        "region": "eu-central-1"
       }
     ]
   },
@@ -24,7 +24,7 @@
             "uniqueId": "bucket"
           }
         },
-        "bucket": "lambda-asset-bucket-test123123asdasd4"
+        "bucket": "new-asset-bucket-test123123asdasd4"
       }
     }
   },

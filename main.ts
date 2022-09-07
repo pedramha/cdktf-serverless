@@ -9,7 +9,7 @@ class MyStack extends TerraformStack {
       region: "eu-central-1"
     });
     new s3.S3Bucket(this, "bucket", {
-      bucket: 'aaa-asset-bucket-test123123asdasd4',
+      bucket: 'new-asset-bucket-test123123asdasd4',
     });
 
   }
